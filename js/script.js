@@ -141,7 +141,7 @@ $(document).ready(function () {
       : $('.arrow-top').fadeOut(300);
   });
 
- 
+
   /// ////// **new-arrivals-section** /////////
   var screen = new Swiper('.arrivals .swiper-container', {
     loop: true,
@@ -242,6 +242,36 @@ $(document).ready(function () {
   });
 
  
+   /// ////// **categories-slider** /////////
+   if ($(window).width() <= 991) {
+    var screen = new Swiper('.categories .swiper-container', {
+     loop: true,
+     autoplay: true,
+     pagination: {
+       el: '.categories .swiper-pagination',
+       clickable: true,
+     },
+   
+     breakpoints: {
+       0: {
+         slidesPerView: 3,
+         spaceBetween: 15,
+       },
+       767: {
+         slidesPerView: 4,
+         spaceBetween: 15,
+       },
+       992: {
+        slidesPerView: 4,
+    },
+    1199: {
+        slidesPerView: 6,
+    },
+ 
+      
+     },
+   });
+ };
 
 
 });
